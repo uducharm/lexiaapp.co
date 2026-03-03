@@ -53,17 +53,9 @@
       z-index: 100;
     }
 
-    .logo img {
-      height: 28px;
-      width: auto;
-      display: block;
-    }
+    .logo img { height: 28px; width: auto; display: block; }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-    }
+    nav ul { list-style: none; display: flex; gap: 2rem; }
 
     nav ul a {
       color: var(--muted);
@@ -74,11 +66,7 @@
 
     nav ul a:hover { color: var(--text); text-decoration: none; }
 
-    .lang-switcher {
-      display: flex;
-      align-items: center;
-      gap: 0.1rem;
-    }
+    .lang-switcher { display: flex; align-items: center; gap: 0.1rem; }
 
     .lang-link {
       font-size: 0.75rem;
@@ -93,12 +81,18 @@
 
     .lang-link:hover { color: var(--text); text-decoration: none; }
     .lang-link.active { color: var(--text); }
+    .lang-sep { color: var(--border); font-size: 0.75rem; user-select: none; }
 
-    .lang-sep {
-      color: var(--border);
-      font-size: 0.75rem;
-      user-select: none;
+    .nav-actions { display: flex; align-items: center; gap: 1rem; }
+
+    .nav-signin {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted);
+      transition: color 0.2s;
     }
+
+    .nav-signin:hover { color: var(--text); text-decoration: none; }
 
     .nav-cta {
       background: var(--accent);
@@ -139,12 +133,18 @@
       font-weight: 700;
       line-height: 1.15;
       letter-spacing: -0.5px;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
-    h1 em {
-      font-style: italic;
+    h1 em { font-style: italic; color: var(--accent-light); }
+
+    .hero-slogan {
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
       color: var(--accent-light);
+      margin-bottom: 1.5rem;
     }
 
     .hero p {
@@ -155,12 +155,7 @@
       line-height: 1.75;
     }
 
-    .hero-actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+    .hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
     .btn-primary {
       background: var(--accent);
@@ -187,11 +182,7 @@
 
     .btn-secondary:hover { border-color: var(--accent); text-decoration: none; }
 
-    .problem-section {
-      text-align: center;
-      padding: 5rem 2rem;
-      background: var(--surface);
-    }
+    .problem-section { text-align: center; padding: 5rem 2rem; background: var(--surface); }
 
     .problem-headline {
       font-size: clamp(1.5rem, 3vw, 2rem);
@@ -204,10 +195,7 @@
       margin-right: auto;
     }
 
-    .problem-headline em {
-      font-style: normal;
-      color: var(--accent-light);
-    }
+    .problem-headline em { font-style: normal; color: var(--accent-light); }
 
     .pain-points {
       display: grid;
@@ -236,12 +224,24 @@
       margin-bottom: 0.4rem;
     }
 
-    section { padding: 5rem 2rem; }
+    .manifesto-section { padding: 6rem 2rem; text-align: center; }
 
-    .section-inner {
-      max-width: 1100px;
+    .manifesto-text {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-style: italic;
+      line-height: 1.9;
+      color: var(--text);
+      max-width: 600px;
       margin: 0 auto;
     }
+
+    .manifesto-text p { margin-bottom: 1.75rem; }
+    .manifesto-text p:last-child { margin-bottom: 0; }
+    .manifesto-accent { color: var(--accent-light); }
+
+    section { padding: 5rem 2rem; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
 
     .section-label {
       font-size: 0.75rem;
@@ -284,24 +284,10 @@
 
     .feature-card:hover { border-color: var(--accent); }
 
-    .feature-icon {
-      width: 28px;
-      height: 28px;
-      margin-bottom: 1.25rem;
-      color: var(--accent-light);
-    }
+    .feature-icon { width: 28px; height: 28px; margin-bottom: 1.25rem; color: var(--accent-light); }
 
-    .feature-card h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .feature-card p {
-      font-size: 0.875rem;
-      color: var(--muted);
-      line-height: 1.65;
-    }
+    .feature-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .feature-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
 
     .how-section { background: var(--surface); }
 
@@ -320,22 +306,10 @@
       letter-spacing: -1px;
     }
 
-    .step h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-    }
+    .step h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .step p { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
 
-    .step p {
-      font-size: 0.875rem;
-      color: var(--muted);
-      line-height: 1.65;
-    }
-
-    .cred-section {
-      padding: 5rem 2rem;
-      text-align: center;
-    }
+    .cred-section { padding: 5rem 2rem; text-align: center; }
 
     .cred-headline {
       font-size: clamp(1.5rem, 3vw, 2rem);
@@ -345,11 +319,7 @@
       margin-bottom: 0.75rem;
     }
 
-    .cred-sub {
-      color: var(--muted);
-      font-size: 1rem;
-      margin-bottom: 3rem;
-    }
+    .cred-sub { color: var(--muted); font-size: 1rem; margin-bottom: 3rem; }
 
     .cred-cards {
       display: grid;
@@ -367,25 +337,9 @@
       padding: 1.75rem;
     }
 
-    .cred-icon {
-      width: 26px;
-      height: 26px;
-      margin-bottom: 1rem;
-      color: var(--accent-light);
-    }
-
-    .cred-card h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-      color: var(--text);
-    }
-
-    .cred-card p {
-      font-size: 0.875rem;
-      color: var(--muted);
-      line-height: 1.65;
-    }
+    .cred-icon { width: 26px; height: 26px; margin-bottom: 1rem; color: var(--accent-light); }
+    .cred-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text); }
+    .cred-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
 
     .beta-cta {
       display: inline-block;
@@ -454,20 +408,9 @@
       margin-bottom: 0.5rem;
     }
 
-    .plan-price span {
-      font-size: 0.875rem;
-      font-weight: 400;
-      color: var(--muted);
-      letter-spacing: 0;
-    }
+    .plan-price span { font-size: 0.875rem; font-weight: 400; color: var(--muted); letter-spacing: 0; }
 
-    .plan-desc {
-      font-size: 0.875rem;
-      color: var(--muted);
-      margin-bottom: 1.5rem;
-      min-height: 2.5rem;
-      line-height: 1.55;
-    }
+    .plan-desc { font-size: 0.875rem; color: var(--muted); margin-bottom: 1.5rem; min-height: 2.5rem; line-height: 1.55; }
 
     .plan-features {
       list-style: none;
@@ -477,12 +420,7 @@
       margin-bottom: 1.75rem;
     }
 
-    .plan-features li {
-      font-size: 0.875rem;
-      display: flex;
-      gap: 0.6rem;
-      align-items: flex-start;
-    }
+    .plan-features li { font-size: 0.875rem; display: flex; gap: 0.6rem; align-items: flex-start; }
 
     .plan-features li::before {
       content: "✓";
@@ -493,11 +431,7 @@
     }
 
     .plan-features li.soon { color: var(--muted); }
-
-    .plan-features li.soon::before {
-      content: "◦";
-      color: var(--border);
-    }
+    .plan-features li.soon::before { content: "◦"; color: var(--border); }
 
     .plan-cta {
       display: block;
@@ -511,7 +445,6 @@
 
     .plan-cta.primary { background: var(--accent); color: #fff; }
     .plan-cta.primary:hover { background: var(--accent-hover); text-decoration: none; }
-
     .plan-cta.secondary { border: 1px solid var(--border); color: var(--text); }
     .plan-cta.secondary:hover { border-color: var(--accent); text-decoration: none; }
 
@@ -550,7 +483,6 @@
     }
 
     .toggle-track.yearly .toggle-thumb { transform: translateX(20px); }
-
     .toggle-label.active { color: var(--text); }
 
     .save-badge {
@@ -567,12 +499,7 @@
     }
 
     .tech-section { background: var(--surface); }
-
-    .tech-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
+    .tech-pills { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 
     .pill {
       background: var(--bg);
@@ -593,12 +520,7 @@
 
     footer strong { color: var(--text); }
 
-    .divider {
-      height: 1px;
-      background: var(--border);
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+    .divider { height: 1px; background: var(--border); max-width: 1100px; margin: 0 auto; }
   </style>
 </head>
 <body>
@@ -617,18 +539,22 @@
       <span class="lang-sep">·</span>
       <a href="../es/" class="lang-link">ES</a>
     </div>
-    <a href="#pricing" class="nav-cta">Commencer</a>
+    <div class="nav-actions">
+      <a href="login" class="nav-signin">Connexion</a>
+      <a href="create" class="nav-cta">Commencer</a>
+    </div>
   </nav>
 
   <div class="hero">
     <div class="badge">Bêta fermée — en cours de développement</div>
     <h1>Vos paroles.<br><em>Élevées.</em></h1>
+    <p class="hero-slogan">Conçu pour les auteurs qui se soucient de leur art.</p>
     <p>
-      Ilena est un compagnon d'écriture pour les paroliers sérieux. Il analyse votre travail,
-      propose des alternatives et affine votre art — sans écrire un seul mot à votre place.
+      Assistance intelligente pour le rythme, le langage et la structure —
+      sans remplacer votre voix.
     </p>
     <div class="hero-actions">
-      <a href="#pricing" class="btn-primary">Commencer gratuitement</a>
+      <a href="create" class="btn-primary">Commencer gratuitement</a>
       <a href="#features" class="btn-secondary">Voir comment ça marche</a>
     </div>
   </div>
@@ -657,6 +583,16 @@
     </div>
   </section>
 
+  <section class="manifesto-section">
+    <blockquote class="manifesto-text">
+      <p>Dans un monde de contenus instantanés,<br>l'art exige toujours du soin.</p>
+      <p><span class="manifesto-accent">La précision compte.<br>La voix compte.</span></p>
+      <p>Ilena se place du côté de l'auteur,<br>là où l'intelligence accompagne,<br>mais où la création reste humaine.</p>
+    </blockquote>
+  </section>
+
+  <div class="divider"></div>
+
   <section id="features">
     <div class="section-inner">
       <div class="section-label">Fonctionnalités</div>
@@ -672,7 +608,7 @@
             <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
           </svg>
           <h3>Éditeur de paroles</h3>
-          <p>Écrivez et organisez toutes vos chansons en un seul endroit. Votre travail est stocké en sécurité et accessible depuis n'importe quel appareil.</p>
+          <p>Écrivez et organisez toutes vos œuvres en un seul endroit. Vos chansons et brouillons sont stockés en sécurité et accessibles depuis n'importe quel appareil.</p>
         </div>
 
         <div class="feature-card">
@@ -717,6 +653,16 @@
 
         <div class="feature-card">
           <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="4 7 4 4 20 4 20 7"/>
+            <line x1="9" y1="20" x2="15" y2="20"/>
+            <line x1="12" y1="4" x2="12" y2="20"/>
+          </svg>
+          <h3>Raffinement linguistique</h3>
+          <p>Identifiez les formulations maladroites et les incohérences grammaticales — sans perdre la qualité naturelle de votre voix.</p>
+        </div>
+
+        <div class="feature-card">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"/>
             <line x1="21" y1="21" x2="16.65" y2="16.65"/>
           </svg>
@@ -739,7 +685,7 @@
         <div class="step">
           <div class="step-num">01</div>
           <h3>Rédigez votre brouillon</h3>
-          <p>Ouvrez une chanson et commencez à écrire. Pas de modèles, pas de contraintes — une page blanche pour vos idées.</p>
+          <p>Ouvrez un projet et commencez à écrire. Pas de modèles, pas de contraintes — une page blanche pour vos idées.</p>
         </div>
         <div class="step">
           <div class="step-num">02</div>
@@ -749,12 +695,12 @@
         <div class="step">
           <div class="step-num">03</div>
           <h3>Affinez à votre rythme</h3>
-          <p>Parcourez les alternatives et suggestions. Acceptez ce qui sert la chanson, ignorez le reste. Vous restez l'auteur.</p>
+          <p>Parcourez les alternatives et suggestions. Acceptez ce qui sert l'œuvre, ignorez le reste. Vous restez l'auteur.</p>
         </div>
         <div class="step">
           <div class="step-num">04</div>
           <h3>Sauvegardez et revenez</h3>
-          <p>Vos chansons sont stockées dans le cloud. Reprenez où vous vous étiez arrêté depuis n'importe quel appareil, à tout moment.</p>
+          <p>Vos œuvres sont stockées dans le cloud. Reprenez où vous vous étiez arrêté depuis n'importe quel appareil, à tout moment.</p>
         </div>
       </div>
     </div>
@@ -797,7 +743,7 @@
           <p>Des paroliers actifs sont impliqués depuis le premier jour — testant, critiquant et orientant ce qui est construit.</p>
         </div>
       </div>
-      <a href="#" class="beta-cta">Bêta fermée bientôt ouverte — demandez un accès anticipé</a>
+      <a href="create" class="beta-cta">Bêta fermée bientôt ouverte — demandez un accès anticipé</a>
     </div>
   </section>
 
@@ -823,31 +769,31 @@
         <div class="plan-card">
           <div class="plan-name">Gratuit</div>
           <div class="plan-price">$0</div>
-          <div class="plan-desc">Pour les auteurs qui veulent essayer Ilena avant de s'engager.</div>
+          <div class="plan-desc">Pour les artistes qui veulent essayer Ilena avant de s'engager.</div>
           <ul class="plan-features">
-            <li>Jusqu'à 2 chansons</li>
+            <li>Jusqu'à 2 œuvres</li>
             <li>Dictionnaire de rimes</li>
             <li>Dictionnaire de définitions</li>
             <li>Suggestions de rimes</li>
             <li>Compteur de syllabes</li>
           </ul>
-          <a href="#" class="plan-cta secondary">Commencer</a>
+          <a href="create" class="plan-cta secondary">Commencer</a>
         </div>
 
         <div class="plan-card featured">
           <div class="plan-tag">Le plus populaire</div>
           <div class="plan-name">Pro</div>
           <div class="plan-price" id="pricePro">$5 <span>/ mois</span></div>
-          <div class="plan-desc">Tout ce dont vous avez besoin en tant que parolier solo actif.</div>
+          <div class="plan-desc">Tout ce dont vous avez besoin en tant qu'artiste solo actif.</div>
           <ul class="plan-features">
-            <li>Chansons illimitées</li>
+            <li>Œuvres et projets illimités</li>
             <li>Toutes les fonctionnalités Gratuit</li>
             <li>Synonymes et antonymes</li>
+            <li>Raffinement linguistique</li>
             <li>Analyse stylistique</li>
-            <li>Insights par IA</li>
             <li>Support prioritaire</li>
           </ul>
-          <a href="#" class="plan-cta primary">Démarrer Pro</a>
+          <a href="create" class="plan-cta primary">Démarrer Pro</a>
         </div>
 
         <div class="plan-card">
@@ -856,12 +802,12 @@
           <div class="plan-desc">Pour les groupes et équipes de co-écriture. Bientôt disponible.</div>
           <ul class="plan-features">
             <li>Tout ce qui est dans Pro</li>
-            <li class="soon">Jusqu'à 15 collaborateurs</li>
-            <li class="soon">Bibliothèque partagée</li>
+            <li class="soon">Jusqu'à 15 artistes</li>
+            <li class="soon">Bibliothèque de projets partagée</li>
             <li class="soon">Analytiques d'équipe</li>
             <li class="soon">Support dédié</li>
           </ul>
-          <a href="#" class="plan-cta secondary">Rejoindre la liste d'attente</a>
+          <a href="create" class="plan-cta secondary">Rejoindre la liste d'attente</a>
         </div>
 
       </div>
@@ -873,7 +819,7 @@
   <section class="tech-section">
     <div class="section-inner">
       <div class="section-label">Construit pour la fiabilité</div>
-      <h2 class="section-title">Vos chansons sont en sécurité. Point final.</h2>
+      <h2 class="section-title">Vos œuvres sont en sécurité. Point final.</h2>
       <p class="section-sub">Vous vous concentrez sur les mots. Nous gérons le reste.</p>
       <div class="tech-pills">
         <span class="pill">Les paroles sont privées et chiffrées</span>

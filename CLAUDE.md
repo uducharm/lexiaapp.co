@@ -69,4 +69,60 @@ Pricing tiers: Free, Pro, Studio.
 - `https://www.ilena.app/[locale]/app/invoicing` --> invoicing microservice
 - `https://www.ilena.app/[locale]/app/profiles` --> profiles microservice
 - `https://www.ilena.app/[locale]/app/notification` --> notification microservice
-- 
+
+## 📖 Ilena — Core Terminology Glossary
+### Artist
+
+Definition:
+
+An individual user of Ilena who creates written works (lyrics, poems, or other structured text).
+
+Notes:
+- An Artist owns their Projects and Works.
+- An Artist may belong to one or multiple Studios.
+- In database terms: primary account entity.
+
+### Studio
+
+Definition:
+
+A collaborative space where multiple Artists can work together on shared Projects.
+
+Notes:
+- Studios are designed for bands, co-writers, or creative teams.
+- A Studio can contain multiple Projects.
+- Artists within a Studio have role-based permissions (owner, editor, viewer).
+- A Studio does not own Works directly — it owns Projects.
+
+### Project
+
+Definition:
+
+A container that groups related Works under a common creative goal.
+
+Examples:
+- An album
+- An EP
+- A songwriting session
+- A thematic collection
+
+Notes:
+- A Project belongs to either an Artist (personal) or a Studio (collaborative).
+- A Project can contain multiple Works.
+- Projects help organize creative intent.
+
+### Work
+
+Definition:
+
+A single creative artifact authored within Ilena.
+
+Examples:
+- A song
+- A poem
+- A draft version of lyrics
+
+Notes:
+- A Work belongs to one Project.
+- A Work can have multiple Versions.
+- A Work is the atomic creative unit in the system.

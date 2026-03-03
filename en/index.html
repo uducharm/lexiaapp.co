@@ -101,6 +101,21 @@
       user-select: none;
     }
 
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-signin {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+
+    .nav-signin:hover { color: var(--text); text-decoration: none; }
+
     .nav-cta {
       background: var(--accent);
       color: #fff !important;
@@ -141,12 +156,21 @@
       font-weight: 700;
       line-height: 1.15;
       letter-spacing: -0.5px;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     h1 em {
       font-style: italic;
       color: var(--accent-light);
+    }
+
+    .hero-slogan {
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 1.5rem;
     }
 
     .hero p {
@@ -238,6 +262,27 @@
       font-weight: 600;
       margin-bottom: 0.4rem;
     }
+
+    /* MANIFESTO */
+    .manifesto-section {
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+
+    .manifesto-text {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-style: italic;
+      line-height: 1.9;
+      color: var(--text);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .manifesto-text p { margin-bottom: 1.75rem; }
+    .manifesto-text p:last-child { margin-bottom: 0; }
+
+    .manifesto-accent { color: var(--accent-light); }
 
     /* SECTION COMMON */
     section { padding: 5rem 2rem; }
@@ -630,19 +675,23 @@
       <span class="lang-sep">·</span>
       <a href="../es/" class="lang-link">ES</a>
     </div>
-    <a href="#pricing" class="nav-cta">Get started</a>
+    <div class="nav-actions">
+      <a href="login" class="nav-signin">Sign in</a>
+      <a href="create" class="nav-cta">Get started</a>
+    </div>
   </nav>
 
   <!-- HERO -->
   <div class="hero">
     <div class="badge">Closed beta — now in development</div>
     <h1>Your lyrics.<br><em>Elevated.</em></h1>
+    <p class="hero-slogan">Built for writers who care about craft.</p>
     <p>
-      Ilena is a writing companion for serious lyricists. It analyses your work,
-      surfaces alternatives, and sharpens your craft — without writing a word for you.
+      Intelligent assistance for rhythm, language, and structure —
+      without replacing your voice.
     </p>
     <div class="hero-actions">
-      <a href="#pricing" class="btn-primary">Start for free</a>
+      <a href="create" class="btn-primary">Start for free</a>
       <a href="#features" class="btn-secondary">See how it works</a>
     </div>
   </div>
@@ -672,6 +721,17 @@
     </div>
   </section>
 
+  <!-- MANIFESTO -->
+  <section class="manifesto-section">
+    <blockquote class="manifesto-text">
+      <p>In a world of instant content,<br>craft still matters.</p>
+      <p><span class="manifesto-accent">Precision matters.<br>Voice matters.</span></p>
+      <p>Ilena stands on the side of authorship,<br>where intelligence assists,<br>but creation remains human.</p>
+    </blockquote>
+  </section>
+
+  <div class="divider"></div>
+
   <!-- FEATURES -->
   <section id="features">
     <div class="section-inner">
@@ -688,7 +748,7 @@
             <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
           </svg>
           <h3>Lyric editor</h3>
-          <p>Write and organise all your songs in one place. Your work is stored securely and accessible from any device.</p>
+          <p>Write and organise all your works in one place. Your songs, poems, and drafts are stored securely and accessible from any device.</p>
         </div>
 
         <div class="feature-card">
@@ -697,7 +757,7 @@
             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
           </svg>
           <h3>Definition dictionary</h3>
-          <p>Look up any word without leaving your song. Understand nuance and choose the word that means exactly what you intend.</p>
+          <p>Look up any word without leaving your work. Understand nuance and choose the word that means exactly what you intend.</p>
         </div>
 
         <div class="feature-card">
@@ -733,6 +793,16 @@
 
         <div class="feature-card">
           <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="4 7 4 4 20 4 20 7"/>
+            <line x1="9" y1="20" x2="15" y2="20"/>
+            <line x1="12" y1="4" x2="12" y2="20"/>
+          </svg>
+          <h3>Language refinement</h3>
+          <p>Identify awkward phrasing and grammatical inconsistencies — without losing the natural quality of your voice.</p>
+        </div>
+
+        <div class="feature-card">
+          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"/>
             <line x1="21" y1="21" x2="16.65" y2="16.65"/>
           </svg>
@@ -756,22 +826,22 @@
         <div class="step">
           <div class="step-num">01</div>
           <h3>Write your draft</h3>
-          <p>Open a song and start writing. No templates, no constraints — a blank canvas for your ideas.</p>
+          <p>Open a project and start writing. No templates, no constraints — a blank canvas for your ideas.</p>
         </div>
         <div class="step">
           <div class="step-num">02</div>
           <h3>Get instant feedback</h3>
-          <p>Ilena analyses your lyrics as you write, surfacing rhythm issues and suggesting rhymes and definitions in context.</p>
+          <p>Ilena analyses your work as you write, surfacing rhythm issues and suggesting rhymes and definitions in context.</p>
         </div>
         <div class="step">
           <div class="step-num">03</div>
           <h3>Refine on your terms</h3>
-          <p>Browse alternatives and suggestions. Accept what serves the song, ignore what doesn't. You remain the author.</p>
+          <p>Browse alternatives and suggestions. Accept what serves the work, ignore what doesn't. You remain the author.</p>
         </div>
         <div class="step">
           <div class="step-num">04</div>
           <h3>Save &amp; return</h3>
-          <p>Your songs are stored in the cloud. Pick up where you left off from any device, at any time.</p>
+          <p>Your works are stored in the cloud. Pick up where you left off from any device, at any time.</p>
         </div>
       </div>
     </div>
@@ -815,7 +885,7 @@
           <p>Active songwriters have been involved from day one — testing, critiquing, and directing what gets built.</p>
         </div>
       </div>
-      <a href="#" class="beta-cta">Closed beta opening soon — request early access</a>
+      <a href="create" class="beta-cta">Closed beta opening soon — request early access</a>
     </div>
   </section>
 
@@ -842,31 +912,31 @@
         <div class="plan-card">
           <div class="plan-name">Free</div>
           <div class="plan-price">$0</div>
-          <div class="plan-desc">For writers who want to try Ilena before committing.</div>
+          <div class="plan-desc">For artists who want to try Ilena before committing.</div>
           <ul class="plan-features">
-            <li>Up to 2 songs</li>
+            <li>Up to 2 works</li>
             <li>Rhyme dictionary</li>
             <li>Definition dictionary</li>
             <li>Rhyme suggestions</li>
             <li>Syllable counter</li>
           </ul>
-          <a href="#" class="plan-cta secondary">Get started</a>
+          <a href="create" class="plan-cta secondary">Get started</a>
         </div>
 
         <div class="plan-card featured">
           <div class="plan-tag">Most popular</div>
           <div class="plan-name">Pro</div>
           <div class="plan-price" id="pricePro">$5 <span>/ month</span></div>
-          <div class="plan-desc">Everything you need as a working solo songwriter.</div>
+          <div class="plan-desc">Everything you need as a working solo artist.</div>
           <ul class="plan-features">
-            <li>Unlimited songs</li>
+            <li>Unlimited works &amp; projects</li>
             <li>All Free features</li>
             <li>Synonym &amp; antonym tool</li>
+            <li>Language refinement</li>
             <li>Style analysis</li>
-            <li>AI-powered insights</li>
             <li>Priority support</li>
           </ul>
-          <a href="#" class="plan-cta primary">Start Pro</a>
+          <a href="create" class="plan-cta primary">Start Pro</a>
         </div>
 
         <div class="plan-card">
@@ -875,12 +945,12 @@
           <div class="plan-desc">For bands and co-writing teams. Coming soon.</div>
           <ul class="plan-features">
             <li>Everything in Pro</li>
-            <li class="soon">Up to 15 collaborators</li>
-            <li class="soon">Shared song library</li>
+            <li class="soon">Up to 15 artists</li>
+            <li class="soon">Shared project library</li>
             <li class="soon">Team analytics</li>
             <li class="soon">Dedicated support</li>
           </ul>
-          <a href="#" class="plan-cta secondary">Join the waitlist</a>
+          <a href="create" class="plan-cta secondary">Join the waitlist</a>
         </div>
 
       </div>
@@ -893,7 +963,7 @@
   <section class="tech-section">
     <div class="section-inner">
       <div class="section-label">Built for reliability</div>
-      <h2 class="section-title">Your songs are safe. Full stop.</h2>
+      <h2 class="section-title">Your works are safe. Full stop.</h2>
       <p class="section-sub">You focus on the words. We handle everything else.</p>
       <div class="tech-pills">
         <span class="pill">Lyrics are private and encrypted</span>

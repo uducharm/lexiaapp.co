@@ -58,6 +58,21 @@ Ilena speaks with clarity, restraint, and intelligence. It avoids hype language,
 
 **Avoid:** trendy slang, overpromising automation, playful tropes.
 
+**Slogan:** Built for writers who care about craft.
+
+**Subtext** Intelligent assistance for rhythm, language, and structure — without replacing your voice.
+
+**Manifesto** 
+```In a world of instant content,
+craft still matters.
+
+Precision matters.
+Voice matters.
+
+Ilena stands on the side of authorship,
+where intelligence assists,
+but creation remains human.
+```
 ---
 
 ## 5. UI Usage Principles
